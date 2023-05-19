@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+  </head>
+  <body>
+    <p id="help">Helpful notes will appear here</p>
+    <p>Email: <input type="text" id="email" name="email" /></p>
+    <p>Name: <input type="text" id="name" name="name" /></p>
+    <p>Age: <input type="text" id="age" name="age" /></p>
+
+    <script>
+      function showHelp(help) {
+        document.getElementById("help").textContent = help;
+      }
+
+      function setupHelp() {
+        var helpText = [
+          { id: "email", help: "Your email address" },
+          { id: "name", help: "Your full name" },
+          { id: "age", help: "Your age (you must be over 16)" },
+        ];
+
+        for (var i = 0; i < helpText.length; i++) {
+          var item = helpText[i]; // <------ Culprit is the use of `var` on this line
+
+          document.getElementById(item.id).onfocus = function () {
+            // In this scope item is always { id: "age", .... },
+            console.log(item.id)
+            showHelp(item.help);
+          };
+        }
+
+        console.log(item.id)  // age  <--- onfocus is reading item assinged in the final iteration
+      }
+
+      setupHelp();
+    </script>
+  </body>
+</html>
