@@ -1,7 +1,7 @@
 # Problem with typeof operator
 
 
-The `typeof` operator indiscriminately returns 'object' various type:
+The `typeof` operator indiscriminately returns 'object' for various types:
 
 ```js
 // Objects
