@@ -1,9 +1,22 @@
 # Difference between `for..of` and `for..in`
 
-Reference: 
+## TL;DR
+
+|                          | for-of | for-in |
+| ------------------------ | ------ | ------ |
+| walks up prototype chain | no     | yes    |
+| includes own property    | no     | yes    |
+| iterates contents        | yes    | yes    |
+
+
+
+## Reference: 
+
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of#difference_between_for...of_and_for...in
 
 
+
+## code
 
 ```js
 Object.prototype.objCustom = function () {};
@@ -29,3 +42,5 @@ for (const i of iterable) {
 }
 // 3 5 7
 ```
+
+ref: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of#difference_between_for...of_and_for...in
