@@ -2,11 +2,11 @@
 
 ## TL;DR
 
-|                          | for-of | for-in |
-| ------------------------ | ------ | ------ |
-| walks up prototype chain | no     | yes    |
-| includes own property    | no     | yes    |
-| iterates contents        | yes    | yes    |
+|                          | for-of       | for-in     |
+| ------------------------ | ------------ | ---------- |
+| walks up prototype chain | no           | yes        |
+| includes own property    | no           | yes        |
+| iterates contents        | yes (values) | yes (keys) |
 
 Note that `for..of` and `for...in` will not list autoboxing properties.
 
