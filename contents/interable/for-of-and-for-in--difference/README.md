@@ -85,6 +85,6 @@ console.log('---- for-of')
 for (const i of someString) {
   console.log(i);
 }
-// "a" "b" "b"
+// "a" "b" "c"
 ```
 
