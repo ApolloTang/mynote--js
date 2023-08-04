@@ -17,8 +17,9 @@ Note that `for..of` and `for...in` will not list autoboxing properties.
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of#difference_between_for...of_and_for...in
 
 
+# Example: complex object:
 
-## eg1-array.cjs
+eg1-array.cjs
 
 ```js
 Object.prototype.objCustom = function () {};
@@ -51,8 +52,9 @@ for (const i of iterable) {
 ref: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of#difference_between_for...of_and_for...in
 
 
+# Example: Primitive value:
 
-## eg2-string.cjs
+eg2-string.cjs
 
 ```js
 Object.prototype.objCustom = function () {};
