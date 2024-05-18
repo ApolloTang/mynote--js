@@ -4,12 +4,13 @@
 
 Install tslab, see https://github.com/yunabe/tslab
 
+Note: I install `yunabe/tslab` with `yarn global`. 
 
 
-## To Run after installation:
+## To Run Jupyter notebook:
 
 ```
-pipenv run jupyter notebook
+pipenv run jupyter lab
 ```
 
 
